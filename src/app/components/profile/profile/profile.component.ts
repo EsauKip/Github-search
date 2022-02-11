@@ -6,10 +6,11 @@ import{ServiceService}from '../../../services/service.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
+Profile:any[]=[];
   constructor( private _profileService: ServiceService) {
   this._profileService.getUserInfo().subscribe((profile: any) => {
     console.log(profile);
+this.Profile = profile;
   })
   }
 
@@ -17,3 +18,5 @@ export class ProfileComponent implements OnInit {
   }
 
 }
+=
+
