@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile/profile.component';
-import { HomepageComponent } from './homepage/homepage/homepage.component';
-import { AboutComponent } from './About/about/about.component';
-
+import { ProfileComponent } from './components/profile/profile/profile.component';
+import { HomepageComponent } from './components/homepage/homepage/homepage.component';
+import { AboutComponent } from './components/About/about/about.component';
+import{HttpClientModule} from '@angular/common/http';
+import{ServiceService}from './services/service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +17,10 @@ import { AboutComponent } from './About/about/about.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
