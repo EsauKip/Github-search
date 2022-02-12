@@ -2,14 +2,14 @@
     <div class="panel panel-primary">
         <div class="panel panel-heading">
             <h1>{{profile.name}} <small>{{profile.login}}</small></h1>
-
+            <div>
+                <span>{{profile.followers}} Followers  </span>
+                <span>{{profile.following}} Following  </span>
+                <span>{{profile.public_repos}} Repositories </span>
+            </div>
 
         </div>
     </div>
 
-    <div class="border border-2 p-5 m-5" *ngFor="let repo of repos">
 
-        <h1>{{repo.name}}</h1>
-        <p>{{repo.description}}</p>
-    </div>
 </div>
