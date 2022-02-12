@@ -1,14 +1,40 @@
 .card {
     float: right;
-    width: 400px;
+    width: 450px;
     height: 300px;
     margin-right: 100px;
-    background-color: lightblue;
+    background-color: rgb(12, 20, 110);
     margin-bottom: 20px;
+    color: white;
 }
 
 .card a {
     position: absolute;
     bottom: 20px;
     margin-left: 30%;
+}
+
+.overlay {
+    background-color: rgba(17, 34, 36, 0.301);
+    border-radius: 9px;
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-right: 4%;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-bottom: 300%;
+}
+
+.search {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 30px;
+}
+
+.body {
+    background-color: aqua;
 }

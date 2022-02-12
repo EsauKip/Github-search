@@ -8,6 +8,7 @@ import { HomepageComponent } from './components/homepage/homepage/homepage.compo
 import { AboutComponent } from './components/About/about/about.component';
 import{HttpClientModule} from '@angular/common/http';
 import{ServiceService}from './services/service.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import{ServiceService}from './services/service.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

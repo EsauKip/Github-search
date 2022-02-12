@@ -1,22 +1,38 @@
-<div class="panel panel-primary">
-    <div class="panel panel-heading">
+<div class="body">
+    <div>
         <h1>{{profile.name}} <small>{{profile.login}}</small></h1>
-        <div>
-            <span>{{profile.followers}} Followers  </span>
-            <span>{{profile.following}} Following  </span>
+    </div>
+    <form class="search ">
+        <label for="userName ">Search Username </label>
+        <input type="text " [(ngModel)]='username' name='userName' (keyup)='showRepos()' placeholder='Search repos' class="form-control ">
+    </form>
+    <div class="overlay ">
+        <div class="panel panel-primary ">
+            <div class="panel panel-heading ">
+                <div>
+                    <button class="btn btn-primary ">{{profile.followers}} Followers </button>
+                    <button class="btn btn-primary ">{{profile.following}} Following </button>
+                    <button class="btn btn-information ">{{profile.following}} Following </button>
+                    <span>{{profile.following}} Following  </span><br>
+                    <a href="{{profile.html_url}} " class="btn btn-primary mt-4 ">  Go to Github</a>
 
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container ">
+            <h3 text-align="center ">These are my repositories</h3>
+            <div class="card mt-5 " *ngFor='let repo of repos'>
+                <h5 class="card-header ">{{repo.name}}</h5>
+                <div class="card-body ">
+                    <p class="card-text ">{{repo.description }} </p>
+                    <p>Created: {{repo.created_at | date }}</p>
+                    <a href="{{repo.html_url}} " class="btn btn-dark ">Go to repo</a>
+                </div>
+            </div>
         </div>
 
     </div>
 
-</div>
-<div class="container repo">
-    <div class="card mt-5 " *ngFor='let repo of repos'>
-        <h5 class="card-header ">{{repo.name}}</h5>
-        <div class="card-body">
-            <p class="card-text">{{repo.description }} </p>
-            <p>Created: {{repo.created_at | date }}</p>
-            <a href="{{repo.html_url}}" class="btn btn-dark">Go to repo</a>
-        </div>
-    </div>
 </div>
