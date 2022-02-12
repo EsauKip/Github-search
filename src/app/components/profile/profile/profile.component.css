@@ -1,0 +1,14 @@
+.card {
+    float: right;
+    width: 400px;
+    height: 300px;
+    margin-right: 100px;
+    background-color: lightblue;
+    margin-bottom: 20px;
+}
+
+.card a {
+    position: absolute;
+    bottom: 20px;
+    margin-left: 30%;
+}

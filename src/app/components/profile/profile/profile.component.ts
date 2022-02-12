@@ -13,6 +13,7 @@ username = "EsauKip";
 
   }
 
+
   ngOnInit(): void {
     this._profileService.getUsername(this.username);
 

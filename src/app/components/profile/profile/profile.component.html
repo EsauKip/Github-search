@@ -1,19 +1,22 @@
-<div>
-    <div class="panel panel-primary">
-        <div class="panel panel-heading">
-            <h1>{{profile.name}} <small>{{profile.login}}</small></h1>
-            <div>
-                <span>{{profile.followers}} Followers  </span>
-                <span>{{profile.following}} Following  </span>
-                <span>{{profile.public_repos}} Repositories </span>
-            </div>
+<div class="panel panel-primary">
+    <div class="panel panel-heading">
+        <h1>{{profile.name}} <small>{{profile.login}}</small></h1>
+        <div>
+            <span>{{profile.followers}} Followers  </span>
+            <span>{{profile.following}} Following  </span>
 
         </div>
+
     </div>
 
-    <div class="border border-2 p-5 m-5" *ngFor="let repo of repos">
-
-        <h1>{{repo.name}}</h1>
-        <p>{{repo.description}}</p>
+</div>
+<div class="container repo">
+    <div class="card mt-5 " *ngFor='let repo of repos'>
+        <h5 class="card-header ">{{repo.name}}</h5>
+        <div class="card-body">
+            <p class="card-text">{{repo.description }} </p>
+            <p>Created: {{repo.created_at | date }}</p>
+            <a href="{{repo.html_url}}" class="btn btn-dark">Go to repo</a>
+        </div>
     </div>
 </div>
