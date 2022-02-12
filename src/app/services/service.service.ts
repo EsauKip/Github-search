@@ -23,6 +23,8 @@ private clientsecret!:'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';
     this.username = username;
   }
 
-  
+  getRepos(){
+    return this.http.get<any[]>(`https://api.github.com/users/${this.username}/repos??access_token=+${this.clientsecret}`).toPromise();
+  }
 
 }

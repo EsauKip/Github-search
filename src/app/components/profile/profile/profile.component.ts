@@ -21,7 +21,9 @@ username = "EsauKip";
        this.profile = profile;
     });
 
-  
+    this._profileService.getRepos().then(repos => {
+      this.repos = repos;
+    })
   }
 
 }

@@ -11,5 +11,9 @@
         </div>
     </div>
 
+    <div class="border border-2 p-5 m-5" *ngFor="let repo of repos">
 
+        <h1>{{repo.name}}</h1>
+        <p>{{repo.description}}</p>
+    </div>
 </div>
