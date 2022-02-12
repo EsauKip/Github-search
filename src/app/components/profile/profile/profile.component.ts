@@ -6,17 +6,24 @@ import{ServiceService}from '../../../services/service.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-Profile:any[]=[];
+profile:any;
+repos:any;
+username = "EsauKip";
   constructor( private _profileService: ServiceService) {
-  this._profileService.getUserInfo().subscribe((profile: any) => {
-    console.log(profile);
-this.Profile = profile;
-  })
+
   }
 
   ngOnInit(): void {
+    this._profileService.getUsername(this.username);
+
+    this._profileService.getUserInfo().then(profile => {
+      console.log(this.profile);
+       this.profile = profile;
+    });
+
+  
   }
 
 }
-=
+
 

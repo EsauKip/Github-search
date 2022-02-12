@@ -1,20 +1,28 @@
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
-import { Http} from '@angular/http';
+import { HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
-private username!: string;
-// private clientid='';
+private username="";
 private clientsecret!:'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';
-  http: any;
 
-  constructor(_http:Http) {
+
+  constructor(private http:HttpClient) {
     console.log("You are now ready to request!");
-    this.username='EsauKip'
+
    }
+
    getUserInfo() {
-     return this.http.get("https://api.github.com/users/" + this.username).map((ressponse: any) => ressponse.json())
-   }
+    //  return this.http.get("https://api.github.com/users/" + this.username).map((response: any) => response.json())
+
+    return this.http.get<any[]>(`https://api.github.com/users/${this.username}??access_token=+${this.clientsecret}`).toPromise();
+  }
+
+  getUsername(username: string) {
+    this.username = username;
+  }
+
+  
+
 }
