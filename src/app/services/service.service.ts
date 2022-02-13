@@ -4,6 +4,9 @@ import { HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ServiceService {
+  getUserRepos() {
+    throw new Error('Method not implemented.');
+  }
 private username="";
 private clientsecret!:'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';
 
