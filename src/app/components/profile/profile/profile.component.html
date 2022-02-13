@@ -16,7 +16,7 @@
 
 
             </div>
-            <div class="col-md-8">
+            <div class="col-md-4">
 
                 <ul class="list-group">
                     <li class="list-group-item">Name:{{profile.name}}</li>
@@ -31,13 +31,6 @@
 
 
 
-
-
-                <button class="btn btn-primary ">{{profile.followers}} Followers </button>
-                <button class="btn btn-primary ">{{profile.public_gists}} Gists </button>
-                <button class="btn btn-primary">{{profile.following}}Following  </button>
-                <button class="btn btn-primary">{{profile.following}} Following </button><br>
-
                 <!-- <!-- <br> <span>Name:{{profile.name}}</span><br>
                 <span>Hirable:{{profile.hireable}}</span><br>
                 <span>Location:{{profile.location}}</span><br> -->
@@ -48,6 +41,21 @@
 
 
 
+            </div>
+            <div class="col-md-4">
+
+
+                <p>
+                    <span class="label label-success">{{profile.followers}} Followers</span>
+                    <br> <span class="label label-default"> Following {{profile.following}}</span><br>
+                    <span class="label label-info">{{profile.public_repos}} Repositories</span><br>
+                    <span class="label label-info">{{profile.public_gists}} Gists</span>
+
+                </p>
+                <!-- <button class="btn btn-primary ">{{profile.followers}} Followers </button>
+                <button class="btn btn-primary ">{{profile.public_gists}} Gists </button>
+                <button class="btn btn-primary">{{profile.following}}Following  </button>
+                <button class="btn btn-primary">{{profile.following}} Following </button><br> -->
             </div>
         </div>
         <div class="container ">
