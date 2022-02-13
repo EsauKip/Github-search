@@ -7,3 +7,8 @@
     background-color: aqua;
     padding-bottom: 240px;
 }
+
+.body a {
+    margin-top: 60px;
+    margin-left: 50%;
+}
