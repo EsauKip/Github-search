@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-4">
 
-                <img src="{{profile.avatar_url}}" class="img-responsive" alt="">
+                <img src="{{profile.avatar_url}}" class="img-rounded img-responsive" alt="">
 
 
 
@@ -18,18 +18,32 @@
             </div>
             <div class="col-md-8">
 
+                <ul class="list-group">
+                    <li class="list-group-item">Name:{{profile.name}}</li>
+                    <li class="list-group-item" *ngIf="profile.bio">Bio:{{profile.bio}}</li>
+                    <li class="list-group-item" *ngIf="profile.location">Location:{{profile.location}}</li>
+                    <li class="list-group-item" *ngIf="profile.hirable">Available for hire{{profile.hirable}}</li>
+                    <li class="list-group-item" *ngIf="profile.email">
+                        <a href="emailto:{{profile.email}}"> Email:{{profile.email}}</a>></li>
+                    <li class="list-group-item" *ngIf="profile.bio"> Type:{{profile.type}}</li>
+                </ul>
+
+
+
+
+
+
                 <button class="btn btn-primary ">{{profile.followers}} Followers </button>
                 <button class="btn btn-primary ">{{profile.public_gists}} Gists </button>
                 <button class="btn btn-primary">{{profile.following}}Following  </button>
                 <button class="btn btn-primary">{{profile.following}} Following </button><br>
-                <span>Blog:{{profile.blog}}</span>
-                <br> <span>Name:{{profile.name}}</span><br>
+
+                <!-- <!-- <br> <span>Name:{{profile.name}}</span><br>
                 <span>Hirable:{{profile.hireable}}</span><br>
-                <span>Location:{{profile.location}}</span><br>
-                <!-- <span>mailto:{{profile.email}}</span> -->
+                <span>Location:{{profile.location}}</span><br> -->
+                <!-- <span>mailto:{{profile.email}}</span>
 
-                <a href="mailto">Email:{{profile.email}}</a>
-
+                <a href="mailto">Email:{{profile.email}}</a> -->
 
 
 
