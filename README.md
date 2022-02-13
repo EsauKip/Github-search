@@ -1,7 +1,9 @@
 # GithubSearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
-
+# Description
+Its a project built in angular where one can be able to search a specific git hub username and be able to view repositories of the username entered in the searchbox.
+# setup and installation steps
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
